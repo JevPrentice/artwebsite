@@ -400,62 +400,7 @@ body {
     padding: 100px;
 
 }
-/*-----------------------------------------------------*/
-
-/* Wrapper */
-
-/*    @-moz-keyframes wrapper {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @-webkit-keyframes wrapper {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @-ms-keyframes wrapper {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes wrapper {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    #wrapper {
-        -moz-animation: wrapper 3s forwards;
-        -webkit-animation: wrapper 3s forwards;
-        -ms-animation: wrapper 3s forwards;
-        animation: wrapper 3s forwards;
-        height: 100%;
-        left: 0;
-        opacity: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }*/
+/*---------------------------------------*/
 
 #bg {
         -moz-animation: bg 60s linear infinite;
@@ -550,72 +495,107 @@ body {
         width: 6750px;
     }
 
-/*    /* Overlay */
+#bg_contact {
+        -moz-animation: bg 60s linear infinite;
+        -webkit-animation: bg 60s linear infinite;
+        -ms-animation: bg 60s linear infinite;
+        animation: bg 60s linear infinite;
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    /* Set your background with this */
 
-/*    @-moz-keyframes overlay {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @-webkit-keyframes overlay {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @-ms-keyframes overlay {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes overlay {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }/**/
-
-/*    overlay {
-        -moz-animation: overlay 1.5s 1.5s forwards;
-        -webkit-animation: overlay 1.5s 1.5s forwards;
-        -ms-animation: overlay 1.5s 1.5s forwards;
-        animation: overlay 1.5s 1.5s forwards;
-        background-attachment: fixed, fixed;
-        background-image: url("../img/intro-bg.jpg"), url("../img/downloads-bg.jpg");
-        background-position: top left, center center;
-        background-repeat: repeat, no-repeat;
-        background-size: auto, cover;
+        background: #a0a2a3 url("../img/contact_bg_1.jpg") bottom left;
+        background-repeat: repeat-x;
         height: 100%;
         left: 0;
-        opacity: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }*/
+        opacity: 1;
+        position: absolute;
+        /*top-padding: -150;*/
+    }
+
+    @-moz-keyframes bg_contact {
+        0% {
+            -moz-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+        100% {
+            -moz-transform: translate3d(-2250px,0,0);
+            -webkit-transform: translate3d(-2250px,0,0);
+            -ms-transform: translate3d(-2250px,0,0);
+            transform: translate3d(-2250px,0,0);
+        }
+    }
+
+    @-webkit-keyframes bg_contact {
+        0% {
+            -moz-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+        100% {
+            -moz-transform: translate3d(-2250px,0,0);
+            -webkit-transform: translate3d(-2250px,0,0);
+            -ms-transform: translate3d(-2250px,0,0);
+            transform: translate3d(-2250px,0,0);
+        }
+    }
+
+    @-ms-keyframes bg_contact {
+        0% {
+            -moz-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+        100% {
+            -moz-transform: translate3d(-2250px,0,0);
+            -webkit-transform: translate3d(-2250px,0,0);
+            -ms-transform: translate3d(-2250px,0,0);
+            transform: translate3d(-2250px,0,0);
+        }
+    }
+
+    @keyframes bg_contact {
+        0% {
+            -moz-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+        100% {
+            -moz-transform: translate3d(-2250px,0,0);
+            -webkit-transform: translate3d(-2250px,0,0);
+            -ms-transform: translate3d(-2250px,0,0);
+            transform: translate3d(-2250px,0,0);
+        }
+    }
+
+    #bg_contact {
+        background-size: 2400px auto;
+        width: 6750px;
+    }
+
+/*-------------------------------------------*/    
 
 
 
 
 
 .CommissionPic{
-    width: 70%;
+    width: 100%;
     height: auto;
     /*float: left;*/
     display: block;
@@ -729,50 +709,6 @@ transition-delay:.2s;
 }
 
 
-/*Vertical slider*/
-
-.btn-vertical-slider{ margin-left:35px; cursor:pointer;}
-a {  cursor:pointer;}
-.carousel.vertical .carousel-inner .item {
-  -webkit-transition: 0.6s ease-in-out top;
-     -moz-transition: 0.6s ease-in-out top;
-      -ms-transition: 0.6s ease-in-out top;
-       -o-transition: 0.6s ease-in-out top;
-          transition: 0.6s ease-in-out top;
-}
-
- .carousel.vertical .active {
-  top: 0;
-}
-
- .carousel.vertical .next {
-  top: 100%;
-}
-
- .carousel.vertical .prev {
-  top: -100%;
-}
-
- .carousel.vertical .next.left,
-.carousel.vertical .prev.right {
-  top: 0;
-}
-
- .carousel.vertical .active.left {
-  top: -100%;
-}
-
- .carousel.vertical .active.right {
-  top: 100%;
-}
-
- .carousel.vertical .item {
-    left: 0;
-}​
-
-
-
-
 
 
 /*-----------------------------------*/
@@ -868,6 +804,30 @@ a {  cursor:pointer;}
     -o-background-size: cover;
 }
 
+#contact {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/contact_bg_1.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.PortraitInfo{
+    background-color: #505050;
+    padding: 20px;
+    text-align: left;
+    display: block;
+    height: 100%;
+    font-size: 12px;
+}
+
 
 
 /*
@@ -927,3 +887,13 @@ a {  cursor:pointer;}
               transform: translate3d(0, 0, 0);
     }
 }*/
+
+
+.bs-example-modal-lg {
+    padding-top:10%;
+}
+
+.bs-example-modal-lg img {
+    width: 1200px;
+    height:auto;
+}
