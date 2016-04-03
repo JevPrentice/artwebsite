@@ -510,7 +510,7 @@ body {
         transform: translate3d(0,0,0);
     /* Set your background with this */
 
-        background: #a0a2a3 url("../img/contact_bg_1.jpg") bottom left;
+        background: #a0a2a3 url("../img/intro-bg.jpg") bottom left;
         background-repeat: repeat-x;
         height: 100%;
         left: 0;
@@ -811,7 +811,7 @@ transition-delay:.2s;
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/contact_bg_1.jpg) no-repeat bottom center scroll;
+    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
