@@ -6,5 +6,5 @@ fs.readFile('client_secret.json', function processClientSecrets(err, content) {
         console.log('Error loading client secret file: ' + err);
         return;
     }
-    authorize(JSON.parse(content), listLabels);
+    authorize(JSON.parse(content), '', listLabels);
 });
