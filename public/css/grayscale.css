@@ -784,8 +784,8 @@ transition-delay:.2s;
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/grey.jpg) no-repeat center center scroll;
-    background-color: #000;
+    /*background: url(../img/grey.jpg) no-repeat center center scroll;*/
+    background-color: #595959;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
