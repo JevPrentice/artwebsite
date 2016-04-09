@@ -768,23 +768,23 @@ transition-delay:.2s;
 
 /* --------------------------background pics------------------------------------*/
 
-.download-section {
+/*.download-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/About_Me_bg.jpg) no-repeat center center scroll;
+    background: url(../img/grey.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
+}*/
 
 .commissions-section{
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/Commissions_bg.JPG) no-repeat center center scroll;
+    background: url(../img/grey.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -792,7 +792,7 @@ transition-delay:.2s;
     -o-background-size: cover;
 }
 
-.self-portraits-section{
+/*.self-portraits-section{
     width: 100%;
     padding: 50px 0;
     color: #fff;
@@ -801,7 +801,7 @@ transition-delay:.2s;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover;*/
 }
 
 #contact {

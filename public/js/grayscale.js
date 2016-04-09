@@ -4,6 +4,36 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/* lazyload.js (c) Lorenzo Giuliani
+ * MIT License (http://www.opensource.org/licenses/mit-license.html)
+ *
+ * expects a list of:  
+ * `<img src="blank.gif" data-src="my_image.png" width="600" height="400" class="lazy">`
+ */
+
+$(document).ready(function() {
+    
+// Support for AJAX loaded modal window.
+// Focuses on first input textbox after it loads the window.
+$('[data-toggle="modal"]').click(function(e) {
+    e.preventDefault();
+    var url = $(this).attr('href');
+    if (url.indexOf('#') == 0) {
+        $(url).modal('open');
+    } else {
+        $.get(url, function(data) {
+            $('<div class="modal hide fade">' + data + '</div>').modal();
+        }).success(function() { $('input:text:visible:first').focus(); });
+    }
+});
+    
+});
+
+$("div.lazy").lazyload({
+      effect : "fadeIn"
+  });
+      
+
 // jQuery to collapse the navbar on scroll
 function collapseNavbar() {
     if ($(".navbar").offset().top > 500) {
