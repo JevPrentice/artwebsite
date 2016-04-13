@@ -11,27 +11,29 @@
  * `<img src="blank.gif" data-src="my_image.png" width="600" height="400" class="lazy">`
  */
 
-$(document).ready(function() {
-    
-// Support for AJAX loaded modal window.
-// Focuses on first input textbox after it loads the window.
-$('[data-toggle="modal"]').click(function(e) {
-    e.preventDefault();
-    var url = $(this).attr('href');
-    if (url.indexOf('#') == 0) {
-        $(url).modal('open');
-    } else {
-        $.get(url, function(data) {
-            $('<div class="modal hide fade">' + data + '</div>').modal();
-        }).success(function() { $('input:text:visible:first').focus(); });
-    }
-});
-    
+
+// $(".modal-content").lazyload({
+//     effect: "fadeIn"
+// })
+
+
+$(function() {
+    $('.modal').on("show.bs.modal", function(){
+        $(this).find(".lazy").each(function() {
+            $(this).attr('src', $(this).attr('data-src-lazy'));
+        });
+    });
 });
 
 $("div.lazy").lazyload({
-      effect : "fadeIn"
+      effect : "fadeIn",
+      threshold: 500
   });
+
+// $("img.lazy").lazyload({
+//       effect : "fadeIn",
+//       threshold: 1200
+//   }); //not working for slider...
       
 
 // jQuery to collapse the navbar on scroll
