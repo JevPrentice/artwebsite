@@ -30,6 +30,19 @@ $("div.lazy").lazyload({
       threshold: 500
   });
 
+$(document).ready(function(){
+  $('.slick_about').slick({
+    autoplay: true,
+    autoplaySpeed: 7000,
+    fade: true,
+    speed: 4000,
+    accessibility: false,
+    arrows: false,
+    focusOnSelect: true,
+  });
+});
+
+
 // $("img.lazy").lazyload({
 //       effect : "fadeIn",
 //       threshold: 1200
