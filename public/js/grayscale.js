@@ -16,6 +16,52 @@
 //     effect: "fadeIn"
 // })
 
+// $('.CommissionProcess').one('inview', function (event, visible) {
+//     if (visible == true) {
+        
+//     }
+// });
+
+// function isScrolledIntoView(elem)
+// {
+//     var docViewTop = $(window).scrollTop();
+//     var docViewBottom = docViewTop + $(window).height();
+//     var elemTop = $(elem).offset().top;
+//     var elemBottom = elemTop + $(elem).height();
+//     return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+// }
+
+// $(window).scroll(function() {    
+//     if(isScrolledIntoView($('#commissions_and_process_scroll_destination')))
+//     {
+//         $("#poem").show();
+//         setTimeout(function() { $("#poem").hide(3000); }, 5000);
+
+//         $(".CommissionProcess").hide();
+//         setTimeout(function(){ $(".CommissionProcess").show(3000);}, 5000);
+//     }    
+// });
+
+var firstScroll = false;
+
+$(document).scroll(function(){
+    if($(this).scrollTop()>=$('#commissions_and_process_scroll_destination').position().top && !firstScroll){
+        textOutImagesIn();
+    }
+    else{$(".CommissionProcess").show();}
+
+})
+
+
+function textOutImagesIn(){
+        $("#poem").show();
+        setTimeout(function() { $("#poem").fadeOut(2000); }, 5000);
+
+        $(".CommissionProcess").hide();
+        setTimeout(function(){ $(".CommissionProcess").fadeIn(2000);}, 7000);
+        $('.carousel').carousel(4); 
+        firstScroll=true;
+}
 
 $(function() {
     $('.modal').on("show.bs.modal", function(){
@@ -31,6 +77,7 @@ $("div.lazy").lazyload({
   });
 
 $(document).ready(function(){
+
   $('.slick_about').slick({
     autoplay: true,
     autoplaySpeed: 7000,
@@ -264,7 +311,7 @@ $('.see_less').click(function(){
 
 //works -- but makes website slow...
             $('.carousel').carousel({
-              interval: 4000
+              interval: 7000
             })
 
  $(window).bind("load", function(){

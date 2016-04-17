@@ -906,21 +906,44 @@ transition-delay:.2s;
     padding-top:5%;
 }
 
+.self-portrait-modal-1,
+.self-portrait-modal-2,
+.self-portrait-modal-3,
+.self-portrait-modal-4,
+.self-portrait-modal-5,
+.self-portrait-modal-6,
+.self-portrait-modal-7,
+.self-portrait-modal-8,
+.self-portrait-modal-9,
+.self-portrait-modal-10, {
+    margin-top: 10%;
+}
+
 .carousel-caption {
     font-size: 24px;
 }
 
 @media (min-width: 768px) {
   .modal-xl {
+    position: absolute;
     width: 100%;
-    max-width:978px;
+    max-width:1000px;
+    margin-left: 25%;
   }
 
-  .modal-xxl{
-    width: 100%;
-    max-width: 1400px;
+  .modal-xxl {
+    width: 200%;
+    max-width: 1000px;
+    margin-left: 15%
   }
 
+  .modal-xxl img {
+    max-width: 1300px;
+  }
+}
+
+.modal-content {
+    background: black;
 }
 
 .modal-backdrop.in {
@@ -932,6 +955,14 @@ transition-delay:.2s;
     margin: 0;
     top: -50px;
     right: -50px; 
+    opacity: 0.9;
+}
+
+.modalclose-portraits {
+    position: absolute;
+    margin: 0;
+    top: -20px;
+    right: -400px; 
     opacity: 0.9;
 }
 
@@ -952,4 +983,10 @@ transition-delay:.2s;
   .PortraitInfo {
     margin-top: 10%;
   }
+
+#poem p{
+    font-size: 50px;
+}
+
+
 
