@@ -387,8 +387,9 @@ body {
     background-size: cover;
     -o-background-size: cover;
    /* vertical-align: middle;*/
-
 }
+
+
 
 .pageIllusion .pageIllusion-body {
     display: table-cell;
@@ -401,13 +402,15 @@ body {
 }
 }
 
+
+
 /*---------------------------------------*/
 
 #bg {
-        -moz-animation: bg 60s linear infinite;
-        -webkit-animation: bg 60s linear infinite;
-        -ms-animation: bg 60s linear infinite;
-        animation: bg 60s linear infinite;
+        -moz-animation: bg 5000s linear infinite;
+        -webkit-animation: bg 5000s linear infinite;
+        -ms-animation: bg 5000s linear infinite;
+        animation: bg 3000s linear infinite;
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         -ms-backface-visibility: hidden;
@@ -418,8 +421,13 @@ body {
         transform: translate3d(0,0,0);
     /* Set your background with this */
 
-        background: #a0a2a3 url("../img/intro-bg.jpg") bottom left;
-        background-repeat: repeat-x;
+        background: #a0a2a3 url("../img/intro-bg.jpg") center center;
+        /*background-repeat: repeat-x;*/
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
         height: 100%;
         left: 0;
         opacity: 1;
@@ -436,10 +444,10 @@ body {
         }
 
         100% {
-            -moz-transform: translate3d(-1700px,0,0);
-            -webkit-transform: translate3d(-1700px,0,0);
-            -ms-transform: translate3d(-1700px,0,0);
-            transform: translate3d(-1700px,0,0);
+            -moz-transform: translate3d(-100%,0,0);
+            -webkit-transform: translate3d(-100%,0,0);
+            -ms-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
         }
     }
 
@@ -452,10 +460,10 @@ body {
         }
 
         100% {
-            -moz-transform: translate3d(-1700px,0,0);
-            -webkit-transform: translate3d(-1700px,0,0);
-            -ms-transform: translate3d(-1700px,0,0);
-            transform: translate3d(-1700px,0,0);
+            -moz-transform: translate3d(-100%,0,0);
+            -webkit-transform: translate3d(-100%,0,0);
+            -ms-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
         }
     }
 
@@ -468,10 +476,10 @@ body {
         }
 
         100% {
-            -moz-transform: translate3d(-1700px,0,0);
-            -webkit-transform: translate3d(-1700px,0,0);
-            -ms-transform: translate3d(-1700px,0,0);
-            transform: translate3d(-1700px,0,0);
+            -moz-transform: translate3d(-100%,0,0);
+            -webkit-transform: translate3d(-100%,0,0);
+            -ms-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
         }
     }
 
@@ -484,16 +492,21 @@ body {
         }
 
         100% {
-            -moz-transform: translate3d(-1700px,0,0);
-            -webkit-transform: translate3d(-1700px,0,0);
-            -ms-transform: translate3d(-1700px,0,0);
-            transform: translate3d(-1700px,0,0);
+            -moz-transform: translate3d(-100%,0,0);
+            -webkit-transform: translate3d(-100%,0,0);
+            -ms-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
         }
     }
 
     #bg {
-        background-size: 2400px auto;
-        width: 6750px;
+        /*background-size: 3000px auto;
+        width: 21000px;*/
+
+        background-size: auto 100%;
+        /*overflow-x: auto;*/
+       /* width: 7930%;*/
+        width: 3000%;
     }
 
 #bg_contact {
@@ -984,9 +997,25 @@ transition-delay:.2s;
     margin-top: 10%;
   }
 
-#poem p{
-    font-size: 50px;
+.poem p{
+    font-size: 40px;
+    
 }
 
+.overlayText { 
+  color: white;
+  display: block;
+  position:absolute;
+/*  z-index:12;*/
+  top:0%;
+  left:0;
+  width:100%;
+  text-align:center;
+}
+
+.commissionsBackground {
+    background-color: grey;
+    height: 100%;
+}
 
 
