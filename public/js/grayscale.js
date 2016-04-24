@@ -76,7 +76,7 @@
             setTimeout(function() { $(".poem").fadeOut(6000); }, 7000);
 
             setTimeout(function(){opacityAnimation("#CommissionsCarousel", 3000, 1)}, 11000);
-            setTimeout(function(){opacityAnimation(".CommissionsHeading", 3000, 1); $('.carousel').carousel(5); }, 9500);
+            setTimeout(function(){opacityAnimation(".CommissionsHeading", 1000, 1); $('.carousel').carousel(0); }, 8500);
             
 
             firstScroll=true;
@@ -240,8 +240,12 @@ $('.see_less').click(function(){
 
 
 //works -- but makes website slow...
-            $('.carousel').carousel({
-              interval: 3500
+$('#CommissionsCarousel').carousel({
+              interval: 7000
+            })
+
+$('.carousel').carousel({
+    interval: 3500
             })
 
  $(window).bind("load", function(){
