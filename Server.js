@@ -36,10 +36,18 @@ app.post('/contactForm', function (req, res) {
 
     var datetimeString = new Date().toLocaleString();
     var messageText = 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
-   
-    var emailLogFile = require("email_log.json");
-    emailLogFile += "\n************" + datetimeString + "\n" + messageText;
-    fs.writeFile("email_log.json", emailLogFile , "utf8", null);
+
+//    var emailLogFile = require("email_log.json");
+
+    fs.readFile('email_log.json', 'utf8', function (err, data) {
+        if (err)
+            throw err;
+        data += "\n************" + datetimeString + "\n" + messageText;
+        fs.writeFile("email_log.json", data, "utf8", null);
+    });
+
+//    emailLogFile += "\n************" + datetimeString + "\n" + messageText;
+
 
     // Load client secrets from a local file.
     fs.readFile('client_secret.json', function processClientSecrets(err, content) {
