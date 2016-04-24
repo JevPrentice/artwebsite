@@ -57,7 +57,9 @@ app.post('/contactForm', function (req, res) {
         }
         // Authorize a client with the loaded credentials, then call the Gmail API.
 
-        authorize(JSON.parse(content), messageText, null);
+        var messageTextLocal = 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
+        ;
+        authorize(JSON.parse(content), messageTextLocal, null);
     });
 
 
