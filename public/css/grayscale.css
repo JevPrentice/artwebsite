@@ -268,6 +268,11 @@ a:focus {
     padding-top: 100px;
 }
 
+.content-section2 {
+    padding-top: 30px;
+}
+
+
 
 
 #map {
@@ -998,7 +1003,7 @@ transition-delay:.2s;
   }
 
 .poem p{
-    font-size: 40px;
+    font-size: 2em;
     
 }
 
@@ -1016,6 +1021,10 @@ transition-delay:.2s;
 .commissionsBackground {
     background-color: grey;
     height: 100%;
+}
+
+#CommissionsCarousel {
+    opacity: 0;
 }
 
 

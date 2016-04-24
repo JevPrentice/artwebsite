@@ -44,9 +44,11 @@
 
 
 ////////////////////////// FOR COMMISSIONS AND PROCESS PAGE ANIMATION
-$(document).ready(function(){
+
     var firstScroll = false;
-    $("#CommissionsCarousel").css('opacity', '0');
+
+    $(".poem").css('opacity', '0');
+    opacityAnimation(".CommissionsHeading", 0, '0')
     //$(".CommissionProcess").hide();
 
 
@@ -61,27 +63,32 @@ $(document).ready(function(){
 
     function textOutImagesIn(){
 
-            //$(".poem").show();
-            $(".poemAnimate").textillate({
-                in: {
-                    effect: 'fadeIn'
-                }
-            });
+            
 
-            setTimeout(function() { $(".poem").fadeOut(3000); }, 13000);
+            opacityAnimation(".poem", 4000, 1);
+            // $(".poem").fadeIn(7000);
+            // $(".poemAnimate").textillate({
+            //     in: {
+            //         effect: 'fadeIn'
+            //     }
+            // });
 
-            setTimeout(function(){opacityAnimation()}, 13000);
-            $('.carousel').carousel(3); 
+            setTimeout(function() { $(".poem").fadeOut(6000); }, 7000);
+
+            setTimeout(function(){opacityAnimation("#CommissionsCarousel", 3000, 1)}, 11000);
+            setTimeout(function(){opacityAnimation(".CommissionsHeading", 3000, 1); $('.carousel').carousel(5); }, 9500);
+            
 
             firstScroll=true;
             
     }
 
-    function opacityAnimation(){
-        $("#CommissionsCarousel").animate({'opacity': '1'}, 3000);
+    function opacityAnimation(divname, time, opacity_lvl){
+        $(divname).animate({'opacity': opacity_lvl}, time);
     }
  
-});
+
+
 
 //////////////////////////////
 
@@ -98,7 +105,64 @@ $("div.lazy").lazyload({
       threshold: 500
   });
 
+   //float footer to bottom of page (always)
+   // var docHeight = $(window).height();
+   // var footerHeight = $('.footerdiv').height();
+   // var footerTop = $('.footerdiv').position().top + footerHeight;
+
+   // if (footerTop < docHeight) {
+   //  $('.footerdiv').css('margin-top', 10+ (docHeight - footerTop) + 'px');
+   // };
+ var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            },
+            none: function() {
+                return null;
+            }
+        };
+
+// if (isMobile.any()){
+//             $(".poem").css('fontSize', '0.6em');
+
+//         };
+
+        
 $(document).ready(function(){
+
+if (isMobile.any()){
+            // if ($(".navbar").offset().top > 200) {
+            //     $(".navbar").fadeIn(3000);
+            //     $(".navbar-fixed-top").addClass("top-nav-collapse");
+            // } else {
+            //     //$(".navbar-fixed-top").removeClass("top-nav-collapse");
+            //     $(".navbar").hide();
+            // }
+
+            $(".poem").css('fontSize', '0.6em');
+
+            $(".about_text").readmore({
+                speed:2000,
+                collapsedHeight: 200,
+                lessLink: '<a href="#">Read Less</a>',
+            });
+
+        };
 
   $('.slick_about').slick({
     autoplay: true,
@@ -120,15 +184,16 @@ $(document).ready(function(){
       
 
 // jQuery to collapse the navbar on scroll
-function collapseNavbar() {
-    if ($(".navbar").offset().top > 500) {
-        $(".navbar").fadeIn(3000);
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        //$(".navbar-fixed-top").removeClass("top-nav-collapse");
-        $(".navbar").hide();
+    function collapseNavbar() {
+        if ($(".navbar").offset().top > 200) {
+            $(".navbar").fadeIn(3000);
+            $(".navbar-fixed-top").addClass("top-nav-collapse");
+        } else {
+            //$(".navbar-fixed-top").removeClass("top-nav-collapse");
+            $(".navbar").hide();
+        }
     }
-}
+
 
 
 $(window).scroll(collapseNavbar);
