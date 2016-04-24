@@ -34,10 +34,6 @@ app.post('/contactForm', function (req, res) {
 //    console.log(phone);
 //    console.log(message);
 
-
-
-//    var emailLogFile = require("email_log.json");
-
     fs.readFile('email_log.json', 'utf8', function (err, data) {
         if (err)
             throw err;
@@ -46,9 +42,6 @@ app.post('/contactForm', function (req, res) {
         data += "\n************" + datetimeString + "\n" + 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
         fs.writeFile("email_log.json", data, "utf8", null);
     });
-
-//    emailLogFile += "\n************" + datetimeString + "\n" + messageText;
-
 
     // Load client secrets from a local file.
     fs.readFile('client_secret.json', function processClientSecrets(err, content) {
@@ -59,12 +52,12 @@ app.post('/contactForm', function (req, res) {
         // Authorize a client with the loaded credentials, then call the Gmail API.
 
         var messageText = 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
-        authorize(JSON.parse(content), messageText, authorizeCallback);
+        authorize(JSON.parse(content), messageText, sendMessage);
     });
 
-    function authorizeCallback(oauth2Client, messageText) {
-        console.log("Authorize Callback - " + messageText);
-    }
+//    function authorizeCallback(oauth2Client, messageText) {
+//        console.log("Authorize Callback - " + messageText);
+//    }
 
     res.sendStatus(200);
 
