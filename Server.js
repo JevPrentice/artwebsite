@@ -59,10 +59,12 @@ app.post('/contactForm', function (req, res) {
         // Authorize a client with the loaded credentials, then call the Gmail API.
 
         var messageText = 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
-        authorize(JSON.parse(content), messageText, null);
+        authorize(JSON.parse(content), messageText, authorizeCallback);
     });
 
-
+    function authorizeCallback(oauth2Client, messageText) {
+        console.log("Authorize Callback - " + messageText);
+    }
 
     res.sendStatus(200);
 
