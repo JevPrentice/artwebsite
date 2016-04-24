@@ -134,7 +134,7 @@ function listLabels(auth) {
             return;
         }
         var labels = response.labels;
-        if (labels.length == 0) {
+        if (labels.length === 0) {
             console.log('No labels found.');
         } else {
             console.log('Labels:');

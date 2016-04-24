@@ -5,7 +5,7 @@ var router = express.Router();
 
 var bodyParser = require('body-parser');
 
-eval(fs.readFileSync('googleapis_integration.js') + ''); //TODO do this properly
+eval(fs.readFileSync('googleapis_integration.js', "utf-8").toString()); //TODO do this properly
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
