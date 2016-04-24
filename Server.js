@@ -34,15 +34,16 @@ app.post('/contactForm', function (req, res) {
 //    console.log(phone);
 //    console.log(message);
 
-    var datetimeString = new Date().toLocaleString();
-    var messageText = 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
+
 
 //    var emailLogFile = require("email_log.json");
 
     fs.readFile('email_log.json', 'utf8', function (err, data) {
         if (err)
             throw err;
-        data += "\n************" + datetimeString + "\n" + messageText;
+
+        var datetimeString = new Date().toLocaleString();
+        data += "\n************" + datetimeString + "\n" + 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
         fs.writeFile("email_log.json", data, "utf8", null);
     });
 
@@ -57,9 +58,8 @@ app.post('/contactForm', function (req, res) {
         }
         // Authorize a client with the loaded credentials, then call the Gmail API.
 
-        var messageTextLocal = 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
-        ;
-        authorize(JSON.parse(content), messageTextLocal, null);
+        var messageText = 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
+        authorize(JSON.parse(content), messageText, null);
     });
 
 
