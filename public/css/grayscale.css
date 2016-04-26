@@ -960,6 +960,26 @@ transition-delay:.2s;
   }
 }
 
+@media (max-width: 767px) {
+  .modal-xl {
+    position: absolute;
+    width: 20%;
+    max-width:200px;
+    margin-left: 0%;
+    
+  }
+
+  .modal-xxl {
+    width: 20%;
+    max-width: 200px;
+    margin-left: 0%
+  }
+
+  .modal-xxl img {
+    max-width: 1300px;
+  }
+}
+
 .modal-content {
     background: black;
 }

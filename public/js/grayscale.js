@@ -145,6 +145,8 @@ $("div.lazy").lazyload({
         
 $(document).ready(function(){
 
+
+
 if (isMobile.any()){
             // if ($(".navbar").offset().top > 200) {
             //     $(".navbar").fadeIn(3000);
@@ -158,9 +160,13 @@ if (isMobile.any()){
 
             $(".about_text").readmore({
                 speed:2000,
-                collapsedHeight: 200,
+                collapsedHeight: 100,
+                moreLink: '<a href="#">Read More</a>',
                 lessLink: '<a href="#">Read Less</a>',
             });
+
+            $(".about_text").css('textAlign', 'left');
+
 
         };
 
