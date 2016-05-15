@@ -978,6 +978,16 @@ transition-delay:.2s;
   .modal-xxl img {
     max-width: 1300px;
   }
+
+  .aboutImg {
+    max-width: 500px;
+  }
+
+  .modal-sm {
+    max-width: 340px;
+    top: 1000px;
+  }
+
 }
 
 .modal-content {
@@ -1048,3 +1058,14 @@ transition-delay:.2s;
 }
 
 
+.aboutImg {
+    width: 100%;
+}
+
+.contactheader {
+    text-align: center;
+}
+
+.footerdiv p{
+    font-size: 1em;
+}

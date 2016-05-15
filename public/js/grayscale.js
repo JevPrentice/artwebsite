@@ -42,77 +42,6 @@
 //     }    
 // });
 
-
-////////////////////////// FOR COMMISSIONS AND PROCESS PAGE ANIMATION
-
-    var firstScroll = false;
-
-    $(".poem").css('opacity', '0');
-    opacityAnimation(".CommissionsHeading", 0, '0')
-    //$(".CommissionProcess").hide();
-
-
-    $(document).scroll(function(){
-        if($(this).scrollTop()>=$('#commissions_and_process_scroll_destination').position().top && !firstScroll){
-            textOutImagesIn();
-        }
-        
-
-    })
-
-
-    function textOutImagesIn(){
-
-            
-
-            opacityAnimation(".poem", 4000, 1);
-            // $(".poem").fadeIn(7000);
-            // $(".poemAnimate").textillate({
-            //     in: {
-            //         effect: 'fadeIn'
-            //     }
-            // });
-
-            setTimeout(function() { $(".poem").fadeOut(6000); }, 7000);
-
-            setTimeout(function(){opacityAnimation("#CommissionsCarousel", 3000, 1)}, 11000);
-            setTimeout(function(){opacityAnimation(".CommissionsHeading", 1000, 1); $('.carousel').carousel(0); }, 8500);
-            
-
-            firstScroll=true;
-            
-    }
-
-    function opacityAnimation(divname, time, opacity_lvl){
-        $(divname).animate({'opacity': opacity_lvl}, time);
-    }
- 
-
-
-
-//////////////////////////////
-
-$(function() {
-    $('.modal').on("show.bs.modal", function(){
-        $(this).find(".lazy").each(function() {
-            $(this).attr('src', $(this).attr('data-src-lazy'));
-        });
-    });
-});
-
-$("div.lazy").lazyload({
-      effect : "fadeIn",
-      threshold: 500
-  });
-
-   //float footer to bottom of page (always)
-   // var docHeight = $(window).height();
-   // var footerHeight = $('.footerdiv').height();
-   // var footerTop = $('.footerdiv').position().top + footerHeight;
-
-   // if (footerTop < docHeight) {
-   //  $('.footerdiv').css('margin-top', 10+ (docHeight - footerTop) + 'px');
-   // };
  var isMobile = {
             Android: function() {
                 return navigator.userAgent.match(/Android/i);
@@ -137,73 +66,127 @@ $("div.lazy").lazyload({
             }
         };
 
-// if (isMobile.any()){
-//             $(".poem").css('fontSize', '0.6em');
 
-//         };
+
+
+function opacityAnimation(divname, time, opacity_lvl){
+        $(divname).animate({'opacity': opacity_lvl}, time);
+    }
+
+////////////////////////// FOR COMMISSIONS AND PROCESS PAGE ANIMATION
+
+if (isMobile.any()){
+    $(".poem").css('opacity', '0');
+    opacityAnimation("#CommissionsCarousel", 2000, 1);
+}
+
+else {
+    var firstScroll = false;
+
+    $(".poem").css('opacity', '0');
+    $(document).scroll(function(){
+        if($(this).scrollTop()>=$('#commissions_and_process_scroll_destination').position().top && !firstScroll){
+            textOutImagesIn();
+        }
+    })
+
+    function textOutImagesIn(){
+            opacityAnimation(".poem", 4000, 1);
+            setTimeout(function() { $(".poem").fadeOut(6000); }, 7000);
+
+            setTimeout(function(){opacityAnimation("#CommissionsCarousel", 3000, 1)}, 11000);
+            setTimeout(function(){opacityAnimation(".CommissionsHeading", 1000, 1); $('.carousel').carousel(0); }, 8500);
+            
+            firstScroll=true;      
+    }   
+};
+ 
+
+
+
+////////////////////////////// LAZY LOAD
+
+$(function() {
+    $('.modal').on("show.bs.modal", function(){
+        $(this).find(".lazy").each(function() {
+            $(this).attr('src', $(this).attr('data-src-lazy'));
+        });
+    });
+});
+
+$("div.lazy").lazyload({
+      effect : "fadeIn",
+      threshold: 500
+  });
+
+//////////////////////////////
 
         
 $(document).ready(function(){
-
-
-
-if (isMobile.any()){
-            // if ($(".navbar").offset().top > 200) {
-            //     $(".navbar").fadeIn(3000);
-            //     $(".navbar-fixed-top").addClass("top-nav-collapse");
-            // } else {
-            //     //$(".navbar-fixed-top").removeClass("top-nav-collapse");
-            //     $(".navbar").hide();
-            // }
-
-            $(".poem").css('fontSize', '0.6em');
+    if (isMobile.any()){
+            $(".modal-dialog").removeClass("modal-xl");
+            $(".modal-dialog").addClass("modal-sm");
 
             $(".about_text").readmore({
                 speed:2000,
                 collapsedHeight: 100,
                 moreLink: '<a href="#">Read More</a>',
-                lessLink: '<a href="#">Read Less</a>',
+                lessLink: '<a href="#about_me_scroll_destination">Read Less</a>',
             });
 
             $(".about_text").css('textAlign', 'left');
-
+            $(".bio_text").css('textAlign', 'left');
 
         };
 
-  $('.slick_about').slick({
-    autoplay: true,
-    autoplaySpeed: 5000,
-    fade: true,
-    speed: 4000,
-    accessibility: false,
-    arrows: false,
-    focusOnSelect: true,
-    mobileFirst: true,
-  });
-});
+    $('.slick_about').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+        fade: true,
+        speed: 4000,
+        accessibility: false,
+        arrows: false,
+        focusOnSelect: true,
+        mobileFirst: true,
+      });
+    });
 
+///////////////////////////////////////////////// jQuery to collapse the navbar on scroll
 
-// $("img.lazy").lazyload({
-//       effect : "fadeIn",
-//       threshold: 1200
-//   }); //not working for slider...
-      
-
-// jQuery to collapse the navbar on scroll
     function collapseNavbar() {
-        if ($(".navbar").offset().top > 200) {
-            $(".navbar").fadeIn(3000);
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
-        } else {
-            //$(".navbar-fixed-top").removeClass("top-nav-collapse");
+        // if($(this).scrollTop()>=$('#commissions_and_process').position().top){
+        //     $(".navbar").fadeIn();
+        //     $(".navbar-fixed-top").addClass("top-nav-collapse");
+        // }
+
+        // else{
+        //    $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        //    $(".navbar").hide(); 
+        // }
+        // if ($(".navbar").offset().top > 200) {
+        if ($(document).scrollTop() > 200){
+             $(".navbar").fadeIn(1000);
+             $(".navbar-fixed-top").addClass("top-nav-collapse");
+        } 
+        else {
+            $(".navbar-fixed-top").removeClass("top-nav-collapse");
             $(".navbar").hide();
         }
     }
 
 
-
-$(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
+$(window).scroll(collapseNavbar);
+//collapseNavbar();
+
+// $('#xx').click(function() {
+//     // collapseNavbar();
+//      $(".navbar").fadeIn(1000);
+//      $(".navbar-fixed-top").addClass("top-nav-collapse");
+// });
+
+///////////////////////////////////////////////
+
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -224,28 +207,29 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 
+//////////////////////////////////////////////
+
+
 
 $('.info').click(function() {
    $('.carousel').carousel(0); 
 });
 
-$('.see_more').click(function(){
-    $(".more_images").show(1000);
-    $(".see_more").hide();
-    });
+// $('.see_more').click(function(){
+//     $(".more_images").show(1000);
+//     $(".see_more").hide();
+//     });
 
-$('.see_less').click(function(){
-    $(".more_images").hide(1000);
-    $(".see_more").show(1000);
-});
-
-
-//vertical slider
+// $('.see_less').click(function(){
+//     $(".more_images").hide(1000);
+//     $(".see_more").show(1000);
+// });
 
 
 
 
-//works -- but makes website slow...
+
+
 $('#CommissionsCarousel').carousel({
               interval: 7000
             })
