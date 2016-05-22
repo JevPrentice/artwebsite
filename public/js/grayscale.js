@@ -42,6 +42,12 @@
 //     }    
 // });
 
+ $(window).bind("load", function(){
+            $('#bg').fadeIn(4000);
+            $('#fade_in_words').fadeIn(4000);
+            //$('#fade_in_words').show("scale", {}, 2000) 
+});
+
  var isMobile = {
             Android: function() {
                 return navigator.userAgent.match(/Android/i);
@@ -57,6 +63,9 @@
             },
             Windows: function() {
                 return navigator.userAgent.match(/IEMobile/i);
+            },
+            Firefox: function(){
+                return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
             },
             any: function() {
                 return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
@@ -75,7 +84,7 @@ function opacityAnimation(divname, time, opacity_lvl){
 
 ////////////////////////// FOR COMMISSIONS AND PROCESS PAGE ANIMATION
 
-if (isMobile.any()){
+if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 || isMobile.any()){
     $(".poem").css('opacity', '0');
     opacityAnimation("#CommissionsCarousel", 2000, 1);
 }
@@ -238,13 +247,7 @@ $('.carousel').carousel({
     interval: 3500
             })
 
- $(window).bind("load", function(){
-        $(document).ready(function(){
-            $('#bg').fadeIn(4000);
-            $('#fade_in_words').fadeIn(4000);
-            //$('#fade_in_words').show("scale", {}, 2000) 
-        })
-});
+
 
 
 
