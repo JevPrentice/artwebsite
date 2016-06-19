@@ -1074,3 +1074,8 @@ transition-delay:.2s;
 .footerdiv p{
     font-size: 1em;
 }
+
+/*.lazy-load {
+    background: url("http://www.mozart.it/images/preloader.gif") center center no-repeat;
+}*/
+
