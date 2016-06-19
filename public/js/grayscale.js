@@ -42,11 +42,13 @@
 //     }    
 // });
 
- $(window).bind("load", function(){
-            $('#bg').fadeIn(4000);
-            $('#fade_in_words').fadeIn(4000);
-            //$('#fade_in_words').show("scale", {}, 2000) 
-});
+// $(window).bind("load", function(){
+//            $('#bg').fadeIn(4000);
+//            $('#fade_in_words').fadeIn(4000);
+//            //$('#fade_in_words').show("scale", {}, 2000) 
+//});
+
+$('#fade_in_words').fadeIn(4000);
 
  var isMobile = {
             Android: function() {
