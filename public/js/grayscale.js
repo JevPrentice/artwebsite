@@ -42,13 +42,21 @@
 //     }    
 // });
 
-// $(window).bind("load", function(){
-//            $('#bg').fadeIn(4000);
-//            $('#fade_in_words').fadeIn(4000);
-//            //$('#fade_in_words').show("scale", {}, 2000) 
-//});
+function opacityAnimation(divname, time, opacity_lvl){
+        $(divname).animate({'opacity': opacity_lvl}, time);
+    }
 
-$('#fade_in_words').fadeIn(4000);
+
+// $(window).bind("load", function(){
+//     opacityAnimation("#fade_in_words", 4000, 1)
+//            //$('#fade_in_words').fadeIn(4000);
+//            //$('#fade_in_words').show("scale", {}, 2000) 
+// });
+
+// $('#fade_in_words').fadeIn(4000);
+opacityAnimation(".brand-heading", 500, 1)
+opacityAnimation(".intro-text", 500, 1)
+// opacityAnimation("#fade_in_words", 4000, 1)
 
  var isMobile = {
             Android: function() {
@@ -80,18 +88,17 @@ $('#fade_in_words').fadeIn(4000);
 
 
 
-function opacityAnimation(divname, time, opacity_lvl){
-        $(divname).animate({'opacity': opacity_lvl}, time);
-    }
 
 ////////////////////////// FOR COMMISSIONS AND PROCESS PAGE ANIMATION
 
 if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 || isMobile.any()){
     $(".poem").css('opacity', '0');
     opacityAnimation("#CommissionsCarousel", 2000, 1);
+    $(".carousel-caption").css('font-size', '1em');
 }
 
 else {
+    opacityAnimation(".CommissionsHeading", 0, 0)
     var firstScroll = false;
 
     $(".poem").css('opacity', '0');
@@ -102,6 +109,7 @@ else {
     })
 
     function textOutImagesIn(){
+
             opacityAnimation(".poem", 4000, 1);
             setTimeout(function() { $(".poem").fadeOut(6000); }, 7000);
 
