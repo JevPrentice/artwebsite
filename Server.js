@@ -5,10 +5,8 @@ var router = express.Router();
 
 var bodyParser = require('body-parser');
 
-eval(fs.readFileSync('googleapis_integration.js', "utf-8").toString()); //TODO do this properly
+eval(fs.readFileSync('googleapis_integration.js', "utf-8").toString());
 
-// configure app to use bodyParser()
-// this will let us get the data from a POST
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -24,44 +22,48 @@ router.get("/", function (req, res) {
 });
 
 app.post('/contactForm', function (req, res) {
-    var name = req.body.name;
-    var email = req.body.email;
-    var phone = req.body.phone;
-    var message = req.body.message;
 
-    console.log(name);
-    console.log(email);
-    console.log(phone);
-    console.log(message);
+    var dateLocaleString = new Date().toLocaleString();
+    var logString = "Contact Form POST: dateLocaleString='" + dateLocaleString + "',name='" + req.body.name + "',email='" + req.body.email + "',phone='" + req.body.phone + "',message='" + req.body.message + "'";
+    console.log("******************************\nPOST Request Recieved at /contactForm req=" + req + " res=" + res + "logString=" + logString);
 
-    fs.readFile('email_log.json', 'utf8', function (err, data) {
-        if (err){
-		console.log(err);
-          	throw err;
-	}     
+    try {
+        fs.readFile('email_log.json', 'utf8', function (err, data) {
+            if (err) {
+                console.log("fs is unable to readFile email_log.json. err=" + err + " data=" + data);
+            } else {
+                data += "\n" + logString;
+                fs.writeFile("email_log.json", data, "utf8", null);
+            }
+        });
+    } catch (err) {
+        console.log("Error while logging to email_log.son . err=" + err + " logString=" + logString);
+    }
 
-        var datetimeString = new Date().toLocaleString();
-        data += "\n************" + datetimeString + "\n" + 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
-        fs.writeFile("email_log.json", data, "utf8", null);
-    });
+    try {
+        fs.readFile('client_secret.json', function (err, data) {
+            if (err) {
+                console.log("fs is unable to readFile client_secret.json. err=" + err + " data=" + data);
+            } else {
 
-    // Load client secrets from a local file.
-    fs.readFile('client_secret.json', function processClientSecrets(err, content) {
-        if (err) {
-            console.log('Error loading client secret file: ' + err);
-            return;
-        }
-        // Authorize a client with the loaded credentials, then call the Gmail API.
+                try {
+                    authorize(JSON.parse(data), logString, sendMessage);
+                } catch (err) {
+                    console.log("Error while performing googleapis integration. err=" + err + " logString=" + logString);
+                }
+            }
+        });
+    } catch (err) {
+        console.log("Error while logging fs . err=" + err + " logString=" + logString);
+    }
 
-        var messageText = 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
-        authorize(JSON.parse(content), messageText, sendMessage);
-    });
-
-//    function authorizeCallback(oauth2Client, messageText) {
-//        console.log("Authorize Callback - " + messageText);
-//    }
+    /*function authorizeCallback(oauth2Client, messageText) {
+     console.log("Authorize Callback - " + messageText);
+     }*/
 
     res.sendStatus(200);
+
+    console.log("******************************\nResponding to /contactForm with 200 req=" + req + " res=" + res + "logString=" + logString);
 
 });
 

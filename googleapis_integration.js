@@ -5,16 +5,16 @@ var googleAuth = require('google-auth-library');
 
 // If modifying these scopes, delete your previously saved credentials
 var SCOPES = ['https://mail.google.com/', 'https://www.googleapis.com/auth/gmail.modify', 'https://www.googleapis.com/auth/gmail.compose', 'https://www.googleapis.com/auth/gmail.send'];
-var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
-        process.env.USERPROFILE) + '/.credentials/';
+var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE) + '/.credentials/';
 var TOKEN_PATH = TOKEN_DIR + 'gmail-nodejs-quickstart.json';
 
 /**
- * Create an OAuth2 client with the given credentials, and then execute the
- * given callback function.
+ * Create an OAuth2 client with the given credentials, and then execute the given callback function.
  *
- * @param {Object} credentials The authorization client credentials
- * @param {function} callback The callback to call with the authorized client.
+ * @param {type} credentials The authorization client credentials
+ * @param {type} messageText
+ * @param {type} callback The callback to call with the authorized client.
+ * @returns {undefined}
  */
 function authorize(credentials, messageText, callback) {
     var clientSecret = credentials.web.client_secret;
