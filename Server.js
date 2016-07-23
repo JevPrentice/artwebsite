@@ -29,14 +29,16 @@ app.post('/contactForm', function (req, res) {
     var phone = req.body.phone;
     var message = req.body.message;
 
-//    console.log(name);
-//    console.log(email);
-//    console.log(phone);
-//    console.log(message);
+    console.log(name);
+    console.log(email);
+    console.log(phone);
+    console.log(message);
 
     fs.readFile('email_log.json', 'utf8', function (err, data) {
-        if (err)
-            throw err;
+        if (err){
+		console.log(err);
+          	throw err;
+	}     
 
         var datetimeString = new Date().toLocaleString();
         data += "\n************" + datetimeString + "\n" + 'Sender Name: ' + name + "\nEmail: " + email + "\nPhone:" + phone + "\nMessage:" + message;
