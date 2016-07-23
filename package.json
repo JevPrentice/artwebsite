@@ -1,10 +1,14 @@
 {
-  "name" : "website-using-express",
-  "version" : "0.0.1",
+  "name" : "Exploring the Unseen",
+  "version" : "1.1.0",
   "scripts" : {
     "start" : "node Server.js"
   },
   "dependencies" : {
-    "express" : "latest"
+    "express" : "latest",
+    "body-parser" : "latest",
+    "readline" : "latest",
+    "googleapis" : "latest",
+    "google-auth-library" : "latest"
   }
 }

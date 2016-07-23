@@ -28,16 +28,16 @@ app.post('/contactForm', function (req, res) {
     console.log("******************************\nPOST Request Recieved at /contactForm req=" + req + " res=" + res + "logString=" + logString);
 
     try {
-        fs.readFile('email_log.json', 'utf8', function (err, data) {
+        fs.readFile('email_log.log', 'utf8', function (err, data) {
             if (err) {
-                console.log("fs is unable to readFile email_log.json. err=" + err + " data=" + data);
+                console.log("fs is unable to readFile email_log.log. err=" + err + " data=" + data);
             } else {
                 data += "\n" + logString;
-                fs.writeFile("email_log.json", data, "utf8", null);
+                fs.writeFile("email_log.log", data, "utf8", null);
             }
         });
     } catch (err) {
-        console.log("Error while logging to email_log.son . err=" + err + " logString=" + logString);
+        console.log("Error while logging to email_log.log . err=" + err + " logString=" + logString);
     }
 
     try {

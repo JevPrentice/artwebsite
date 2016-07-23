@@ -1,4 +1,6 @@
 /nbproject/private/
+/nbproject/project.xml
 /nbproject/
 /node_modules/
 client_secret.json
+email_log.log
