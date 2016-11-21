@@ -1,4 +1,4 @@
-/*!
+!
  * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
@@ -10,7 +10,7 @@ body {
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
     background-color: #000;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 html {
@@ -157,8 +157,8 @@ a:focus {
 }
 
 .intro .intro-body {
-    /*display: table-cell;*/
-    /*vertical-align: middle;*/
+    display: table-cell;
+    vertical-align: middle;
 }
 
 
@@ -166,35 +166,30 @@ a:focus {
 /*-----------------------------------*/
 
 .intro .intro-body .brand-heading {
-    /*font-size: 40px;*/
-    /*font-size: 600%;*/
-    font-size: 5.0vw;
+    font-size: 40px;
 }
 
 .intro .intro-body .intro-text {
-    /*font-size: 18px;*/
-    font-size: 1.5vw;
+    font-size: 18px;
 }
 
-/*@media(min-width:768px) {
+@media(min-width:768px) {
     .intro {
         height: 100%;
         padding: 0;
     }
 
     .intro .intro-body .brand-heading {
-        font-size: 600%;
-        /*font-size: 100px;*/
-       /* text-shadow: 5px 2px #4d4d4d;*/
+        font-size: 100px;
+        /*text-shadow: 2px 2px #4d4d4d;*/
 
-   /* }
+    }
 
     .intro .intro-body .intro-text {
-        font-size: 2em;
-        /*font-size: 26px;*/
-       /* text-shadow: 2px 2px #4d4d4d;*/
-   /* }
-}*/
+        font-size: 26px;
+        /*text-shadow: 2px 2px #4d4d4d;*/
+    }
+}
 
 .btn-circle {
     width: 70px;
@@ -270,14 +265,9 @@ a:focus {
     }
 }
 
-/*.content-section {
-    padding-top: 100px;
-}*/
-
-.content-section2 {
-    padding-top: 30px;
+.content-section {
+    padding-top: 50px;
 }
-
 
 
 
@@ -287,7 +277,7 @@ a:focus {
     margin-top: 100px;
 }
 
-/*@media(min-width:767px) {
+@media(min-width:767px) {
     .content-section {
         padding-top: 250px;
     }
@@ -300,7 +290,7 @@ a:focus {
         height: 400px;
         margin-top: 250px;
     }
-}*/
+}
 
 .btn {
     border-radius: 0;
@@ -397,31 +387,82 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-   /* vertical-align: middle;*/
+    vertical-align: middle;
+
 }
-
-
 
 .pageIllusion .pageIllusion-body {
     display: table-cell;
     vertical-align: middle;
 }
 
-@media (min-width: 768px) {
- .introductory-text {
+
+.introductory-text {
     padding: 100px;
+
 }
-}
+/*-----------------------------------------------------*/
 
+/* Wrapper */
 
+/*    @-moz-keyframes wrapper {
+        0% {
+            opacity: 0;
+        }
 
-/*---------------------------------------*/
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes wrapper {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes wrapper {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes wrapper {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    #wrapper {
+        -moz-animation: wrapper 3s forwards;
+        -webkit-animation: wrapper 3s forwards;
+        -ms-animation: wrapper 3s forwards;
+        animation: wrapper 3s forwards;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }*/
 
 #bg {
-        -moz-animation: bg 5000s linear infinite;
-        -webkit-animation: bg 5000s linear infinite;
-        -ms-animation: bg 5000s linear infinite;
-        animation: bg 3000s linear infinite;
+        -moz-animation: bg 60s linear infinite;
+        -webkit-animation: bg 60s linear infinite;
+        -ms-animation: bg 60s linear infinite;
+        animation: bg 60s linear infinite;
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         -ms-backface-visibility: hidden;
@@ -432,13 +473,8 @@ body {
         transform: translate3d(0,0,0);
     /* Set your background with this */
 
-        background: #a0a2a3 url("../img/intro-bg.jpg") center center;
-        /*background-repeat: repeat-x;*/
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        width: 100%;
+        background: #a0a2a3 url("../img/intro-bg.jpg") bottom left;
+        background-repeat: repeat-x;
         height: 100%;
         left: 0;
         opacity: 1;
@@ -455,10 +491,10 @@ body {
         }
 
         100% {
-            -moz-transform: translate3d(-100%,0,0);
-            -webkit-transform: translate3d(-100%,0,0);
-            -ms-transform: translate3d(-100%,0,0);
-            transform: translate3d(-100%,0,0);
+            -moz-transform: translate3d(-2250px,0,0);
+            -webkit-transform: translate3d(-2250px,0,0);
+            -ms-transform: translate3d(-2250px,0,0);
+            transform: translate3d(-2250px,0,0);
         }
     }
 
@@ -471,10 +507,10 @@ body {
         }
 
         100% {
-            -moz-transform: translate3d(-100%,0,0);
-            -webkit-transform: translate3d(-100%,0,0);
-            -ms-transform: translate3d(-100%,0,0);
-            transform: translate3d(-100%,0,0);
+            -moz-transform: translate3d(-2250px,0,0);
+            -webkit-transform: translate3d(-2250px,0,0);
+            -ms-transform: translate3d(-2250px,0,0);
+            transform: translate3d(-2250px,0,0);
         }
     }
 
@@ -487,10 +523,10 @@ body {
         }
 
         100% {
-            -moz-transform: translate3d(-100%,0,0);
-            -webkit-transform: translate3d(-100%,0,0);
-            -ms-transform: translate3d(-100%,0,0);
-            transform: translate3d(-100%,0,0);
+            -moz-transform: translate3d(-2250px,0,0);
+            -webkit-transform: translate3d(-2250px,0,0);
+            -ms-transform: translate3d(-2250px,0,0);
+            transform: translate3d(-2250px,0,0);
         }
     }
 
@@ -503,124 +539,84 @@ body {
         }
 
         100% {
-            -moz-transform: translate3d(-100%,0,0);
-            -webkit-transform: translate3d(-100%,0,0);
-            -ms-transform: translate3d(-100%,0,0);
-            transform: translate3d(-100%,0,0);
+            -moz-transform: translate3d(-2250px,0,0);
+            -webkit-transform: translate3d(-2250px,0,0);
+            -ms-transform: translate3d(-2250px,0,0);
+            transform: translate3d(-2250px,0,0);
         }
     }
 
     #bg {
-        /*background-size: 3000px auto;
-        width: 21000px;*/
-
-        background-size: auto 100%;
-        /*overflow-x: auto;*/
-       /* width: 7930%;*/
-        width: 3000%;
-    }
-
-#bg_contact {
-        -moz-animation: bg 60s linear infinite;
-        -webkit-animation: bg 60s linear infinite;
-        -ms-animation: bg 60s linear infinite;
-        animation: bg 60s linear infinite;
-        -moz-backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -moz-transform: translate3d(0,0,0);
-        -webkit-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-    /* Set your background with this */
-
-        background: #a0a2a3 url("../img/contact_bg_1.jpg") bottom left;
-        background-repeat: repeat-x;
-        height: 100%;
-        left: 0;
-        opacity: 1;
-        position: absolute;
-        /*top-padding: -150;*/
-    }
-
-    @-moz-keyframes bg_contact {
-        0% {
-            -moz-transform: translate3d(0,0,0);
-            -webkit-transform: translate3d(0,0,0);
-            -ms-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
-        }
-
-        100% {
-            -moz-transform: translate3d(-1700px,0,0);
-            -webkit-transform: translate3d(-1700px,0,0);
-            -ms-transform: translate3d(-1700px,0,0);
-            transform: translate3d(-1700px,0,0);
-        }
-    }
-
-    @-webkit-keyframes bg_contact {
-        0% {
-            -moz-transform: translate3d(0,0,0);
-            -webkit-transform: translate3d(0,0,0);
-            -ms-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
-        }
-
-        100% {
-            -moz-transform: translate3d(-1700px,0,0);
-            -webkit-transform: translate3d(-1700px,0,0);
-            -ms-transform: translate3d(-1700px,0,0);
-            transform: translate3d(-1700px,0,0);
-        }
-    }
-
-    @-ms-keyframes bg_contact {
-        0% {
-            -moz-transform: translate3d(0,0,0);
-            -webkit-transform: translate3d(0,0,0);
-            -ms-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
-        }
-
-        100% {
-            -moz-transform: translate3d(-1700px,0,0);
-            -webkit-transform: translate3d(-1700px,0,0);
-            -ms-transform: translate3d(-1700px,0,0);
-            transform: translate3d(-1700px,0,0);
-        }
-    }
-
-    @keyframes bg_contact {
-        0% {
-            -moz-transform: translate3d(0,0,0);
-            -webkit-transform: translate3d(0,0,0);
-            -ms-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
-        }
-
-        100% {
-            -moz-transform: translate3d(-1700px,0,0);
-            -webkit-transform: translate3d(-1700px,0,0);
-            -ms-transform: translate3d(-1700px,0,0);
-            transform: translate3d(-1700px,0,0);
-        }
-    }
-
-    #bg_contact {
         background-size: 2400px auto;
         width: 6750px;
     }
 
-/*-------------------------------------------*/    
+/*    /* Overlay */
+
+/*    @-moz-keyframes overlay {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes overlay {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes overlay {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes overlay {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }/**/
+
+/*    overlay {
+        -moz-animation: overlay 1.5s 1.5s forwards;
+        -webkit-animation: overlay 1.5s 1.5s forwards;
+        -ms-animation: overlay 1.5s 1.5s forwards;
+        animation: overlay 1.5s 1.5s forwards;
+        background-attachment: fixed, fixed;
+        background-image: url("../img/intro-bg.jpg"), url("../img/downloads-bg.jpg");
+        background-position: top left, center center;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }*/
 
 
 
 
 
 .CommissionPic{
-    width: 100%;
+    width: 70%;
     height: auto;
     /*float: left;*/
     display: block;
@@ -685,13 +681,6 @@ transition:all .2s ease-in-out;
 padding:10px;
 }
 
-.hovereffect a{
-    /*margin-top: 43%;*/
-    position: absolute;
-    bottom: 20px;
-    margin-left: -10%;
-}
-
 .hovereffect a.info {
 text-decoration:none;
 display:inline-block;
@@ -705,7 +694,7 @@ filter:alpha(opacity=0);
 -webkit-transition:all .2s ease-in-out;
 transition:all .2s ease-in-out;
 
-/*margin: 50% 0 0;
+margin: 350px 0 0;
 /*display: inline;
 margin-left:auto;
 margin-right: auto;*/
@@ -741,6 +730,50 @@ transition-delay:.2s;
 }
 
 
+/*Vertical slider*/
+
+.btn-vertical-slider{ margin-left:35px; cursor:pointer;}
+a {  cursor:pointer;}
+.carousel.vertical .carousel-inner .item {
+  -webkit-transition: 0.6s ease-in-out top;
+     -moz-transition: 0.6s ease-in-out top;
+      -ms-transition: 0.6s ease-in-out top;
+       -o-transition: 0.6s ease-in-out top;
+          transition: 0.6s ease-in-out top;
+}
+
+ .carousel.vertical .active {
+  top: 0;
+}
+
+ .carousel.vertical .next {
+  top: 100%;
+}
+
+ .carousel.vertical .prev {
+  top: -100%;
+}
+
+ .carousel.vertical .next.left,
+.carousel.vertical .prev.right {
+  top: 0;
+}
+
+ .carousel.vertical .active.left {
+  top: -100%;
+}
+
+ .carousel.vertical .active.right {
+  top: 100%;
+}
+
+ .carousel.vertical .item {
+    left: 0;
+}​
+
+
+
+
 
 
 /*-----------------------------------*/
@@ -770,7 +803,7 @@ transition-delay:.2s;
 
 /*-------------------pulsing carousel---------------------*/
 
-/*.carousel-fade .item {
+.carousel-fade .item {
   opacity: 0;
   -webkit-transition: opacity 3s ease-in-out;
   -moz-transition: opacity 3s ease-in-out;
@@ -779,7 +812,7 @@ transition-delay:.2s;
   transition: opacity 3s ease-in-out;
  /* transition-duration: 3s;*/
 
-/*}
+}
 
 .carousel-fade .active {
   opacity: 1 !important;
@@ -796,36 +829,35 @@ transition-delay:.2s;
 
 .carousel-fade .carousel-control {
   opacity: 1 !important;
-
-}*/
+}
 
 /* --------------------------background pics------------------------------------*/
 
-/*.download-section {
+.download-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/grey.jpg) no-repeat center center scroll;
+    background: url(../img/About_Me_bg.jpg) no-repeat center center scroll;
     background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}*/
-
-.background-load{
-    width: 100%;
-    padding: 50px 0;
-    color: #fff;
-    /*background: url(../img/grey.jpg) no-repeat center center scroll;*/
-    background-color: #000000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-/*.self-portraits-section{
+.commissions-section{
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background: url(../img/Commissions_bg.JPG) no-repeat center center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.self-portraits-section{
     width: 100%;
     padding: 50px 0;
     color: #fff;
@@ -834,32 +866,10 @@ transition-delay:.2s;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;*/
-}
-
-#contact {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    background: url(../img/contact_bg_1.jpg) no-repeat bottom center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
 }
 
-.PortraitInfo{
-    /*background-color: #505050;*/
-    padding: 20px;
-    text-align: left;
-    display: block;
-    height: 100%;
-    font-size: 12px;
-}
+
 
 
 /*
@@ -919,239 +929,3 @@ transition-delay:.2s;
               transform: translate3d(0, 0, 0);
     }
 }*/
-
-
-.bs-example-modal-lg,
-.bs-example-modal-lg-2,
-.bs-example-modal-lg-3,
-.bs-example-modal-lg-4,
-.bs-example-modal-lg-5 {
-    padding-top:5%;
-}
-
-.self-portrait-modal-1,
-.self-portrait-modal-2,
-.self-portrait-modal-3,
-.self-portrait-modal-4,
-.self-portrait-modal-5,
-.self-portrait-modal-6,
-.self-portrait-modal-7,
-.self-portrait-modal-8,
-.self-portrait-modal-9,
-.self-portrait-modal-10, {
-    margin-top: 10%;
-}
-
-.carousel-caption {
-    font-size: 2em;
-}
-
-@media (min-width: 768px) {
-  .modal-xl {
-    position: absolute;
-    width: 100%;
-    max-width:1000px;
-    margin-left: 25%;
-  }
-
-  .modal-xxl {
-    width: 200%;
-    max-width: 1000px;
-    margin-left: 15%
-  }
-
-  .modal-xxl img {
-    max-width: 1300px;
-  }
-}
-
-@media (max-width: 767px) {
-  .modal-xl {
-    position: absolute;
-    width: 20%;
-    max-width:200px;
-    margin-left: 0%;
-    
-  }
-
-  .modal-xxl {
-    width: 20%;
-    max-width: 200px;
-    margin-left: 0%
-  }
-
-  .modal-xxl img {
-    max-width: 1300px;
-  }
-
-  .aboutImg {
-    max-width: 500px;
-  }
-
-  .modal-sm {
-    max-width: 340px;
-    top: 1000px;
-  }
-
-}
-
-.modal-content {
-    background: black;
-}
-
-.modal-backdrop.in {
-    opacity: 1;
-}
-
-.modalclose {
-    position: absolute;
-    margin: 0;
-    top: -50px;
-    right: -50px; 
-    opacity: 0.9;
-}
-
-.modalclose-portraits {
-    position: absolute;
-    margin: 0;
-    top: -20px;
-    right: -400px; 
-    opacity: 0.9;
-}
-
-.modalclose:hover {
-    opacity: 1;
-}
-
-.white, .white a {
-  color: #fff;
-}
-
-.right-align-arrow {
-    /*left: 0;*/
-    left: 100%;
-
-}
-
-  .PortraitInfo {
-    margin-top: 10%;
-  }
-
-.poem p{
-    font-size: 2em;
-    
-}
-
-.overlayText { 
-  color: white;
-  display: block;
-  position:absolute;
-/*  z-index:12;*/
-  top:0%;
-  left:0;
-  width:100%;
-  text-align:center;
-}
-
-.commissionsBackground {
-    
-    background-color: black;
-    height: 100%;
-}
-
-/*#CommissionsCarousel {
-    opacity: 0;
-}*/ /*For animation*/
-
-
-.aboutImg {
-    width: 100%;
-}
-
-.contactheader {
-    text-align: center;
-}
-
-.footerdiv p{
-    font-size: 1em;
-}
-
-
-
-/*.lazy-load {
-    background: url("http://www.mozart.it/images/preloader.gif") center center no-repeat;
-}*/
-
-.section {
-   /* position: absolute;*/
-    bottom: 15%;
-   /* left: 50%;*/
-    
-}
-
-/*#commissions_and_process_body{
-
-    background: url("../img/Commissions_bg.jpg");
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-#about_me_body{
-
-    background: url("../img/About_Me_bg.jpg");
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-#self_portraits_body{
-
-    background: url("../img/Self_Portraits_bg.JPG");
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}*/
-
-#about_me_body{
-    background: url("../img/About_Me_bg.jpg");
-    width: auto;
-}
-
-#self_portraits_body{
-    background: url("../img/Self_Portraits_bg.jpg");
-    width: auto;
-}
-
-#commissions_and_process_body{
-    background: url("../img/Commissions_bg.jpg");
-    width: auto;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
