@@ -123,7 +123,7 @@ a:focus {
     color: #fff;
 }
 
-@media(min-width:768px) {
+@media(min-width:768px) { /*THIS IS THE CODE PATCH TO USE TO CHANGE NAV's APPEARANCE*/
     .navbar-custom {
         padding: 20px 0;
         border-bottom: 0;
@@ -140,6 +140,7 @@ a:focus {
         background: #000;
     }
 }
+
 
 .intro {
     display: table;
@@ -165,16 +166,34 @@ a:focus {
 
 /*-----------------------------------*/
 
-.intro .intro-body .brand-heading {
-    /*font-size: 40px;*/
-    /*font-size: 600%;*/
+/*.intro .intro-body .brand-heading {
+    font-size: 5em;
+    /*font-size: 600%;
     font-size: 5.0vw;
 }
-
-.intro .intro-body .intro-text {
-    /*font-size: 18px;*/
-    font-size: 1.5vw;
+*/
+.intro .intro-body .brand-heading{
+    font-size: 100px;
 }
+
+.intro .intro-body .intro-text{
+    font-size:25px;
+}
+
+@media(max-width:768px){
+    .intro .intro-body .brand-heading{
+        font-size: 50px;
+    }
+
+    .intro .intro-body .intro-text{
+        font-size: 14px;
+    }
+}
+
+/*.intro .intro-body .intro-text {
+    /*font-size: 18px;*/
+   /* font-size: 1.5vw;
+}*/
 
 /*@media(min-width:768px) {
     .intro {
@@ -963,6 +982,13 @@ transition-delay:.2s;
   .modal-xxl img {
     max-width: 1300px;
   }
+
+  .contact_container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+  }
 }
 
 @media (max-width: 767px) {
@@ -990,7 +1016,7 @@ transition-delay:.2s;
 
   .modal-sm {
     max-width: 340px;
-    top: 1000px;
+    top: 150px; /*to change placement of modals on mobile version*/
   }
 
 }
@@ -1082,7 +1108,7 @@ transition-delay:.2s;
     background: url("http://www.mozart.it/images/preloader.gif") center center no-repeat;
 }*/
 
-.section {
+section {
    /* position: absolute;*/
     bottom: 15%;
    /* left: 50%;*/
@@ -1144,7 +1170,8 @@ transition-delay:.2s;
 
 #self_portraits_body{
     background: url("../img/Self_Portraits_bg.jpg");
-    width: auto;
+    background-size: cover;
+    width: 100%;
 }
 
 #commissions_and_process_body{
@@ -1154,4 +1181,15 @@ transition-delay:.2s;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.index_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#commissions_and_process_body, #about_me_body, #self_portraits_body {
+  padding-top: 5%; /*This works regardless of display size.*/
 }

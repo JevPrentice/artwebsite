@@ -157,7 +157,9 @@ $(document).ready(function(){
 
             $(".about_text").css('textAlign', 'left');
             $(".bio_text").css('textAlign', 'left');
-
+            $("#commissions_and_process_body").css('paddingTop', '30%');
+            $("#about_me_body").css('paddingTop', '30%');
+            $("#self_portraits_body").css('paddingTop', '30%');
         };
 
     $('.slick_about').slick({
