@@ -853,8 +853,8 @@ transition-delay:.2s;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;*/
-}
+    -o-background-size: cover;
+}*/
 
 #contact {
     display: table;
@@ -957,7 +957,7 @@ transition-delay:.2s;
 .self-portrait-modal-7,
 .self-portrait-modal-8,
 .self-portrait-modal-9,
-.self-portrait-modal-10, {
+.self-portrait-modal-10 {
     margin-top: 10%;
 }
 
