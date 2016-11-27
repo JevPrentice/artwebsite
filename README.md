@@ -24,3 +24,6 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 ## Copyright and License
 
 Copyright 2013-2015 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
+
+## Run
+sudo forever start Server.js --append -l /var/log/artwebsite_l.log -o /var/log/artwebsite_o.log -e /var/log/artwebsite_e.log -v
