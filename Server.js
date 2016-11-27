@@ -61,7 +61,7 @@ app.post('/contactForm', function (req, res) {
             var newValue = data.substr(0, position) + ",\n" + logString + data.substr(position);
             data = newValue;
         }
-        fs.writeFile("email_log.json", data, "utf8", null);
+        fs.writeFile("email.log", data, "utf8", null);
     });
 
     // Load client secrets from a local file.
