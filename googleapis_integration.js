@@ -99,7 +99,7 @@ function makeBody(to, from, subject, message) {
 
 function sendMessage(auth, messageText) {
 
-    var raw = makeBody('jevprentice@gmail.com', 'jevprentice@gmail.com', 'Exploring the Unseen - Website Contact', messageText);
+    var raw = makeBody('primalpurr@gmail.com', 'primalpurr@gmail.com', 'Exploring the Unseen - Website Contact', messageText);
 
     var gmail = google.gmail('v1');
     gmail.users.messages.send({
