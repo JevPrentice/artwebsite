@@ -1,7 +1,9 @@
 /nbproject/private/
 /nbproject/
+/nbproject/project.properties
 /node_modules/
 client_secret.json
 email_log.json
 email_log.log
 email.log
+.DS_Store
