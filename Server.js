@@ -5,7 +5,7 @@ var express = require("express");
 var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
-require('util');
+var util = require('util');
 
 eval(fs.readFileSync('googleapis_integration.js', "utf-8").toString()); //TODO do this properly
 
