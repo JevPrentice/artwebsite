@@ -42,6 +42,8 @@
 //     }    
 // });
 
+
+
 function opacityAnimation(divname, time, opacity_lvl){
         $(divname).animate({'opacity': opacity_lvl}, time);
     }
@@ -91,34 +93,34 @@ opacityAnimation(".intro-text", 500, 1)
 
 ////////////////////////// FOR COMMISSIONS AND PROCESS PAGE ANIMATION
 
-if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 || isMobile.any()){
-    $(".poem").css('opacity', '0');
-    opacityAnimation("#CommissionsCarousel", 2000, 1);
-    $(".carousel-caption").css('font-size', '1em');
-}
+// if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 || isMobile.any()){
+//     $(".poem").css('opacity', '0');
+//     opacityAnimation("#CommissionsCarousel", 2000, 1);
+//     $(".carousel-caption").css('font-size', '1em');
+// }
 
-else {
-    opacityAnimation(".CommissionsHeading", 0, 0)
-    var firstScroll = false;
+// else {
+//     opacityAnimation(".CommissionsHeading", 0, 0)
+//     var firstScroll = false;
 
-    $(".poem").css('opacity', '0');
-    $(document).scroll(function(){
-        if($(this).scrollTop()>=$('#commissions_and_process_scroll_destination').position().top && !firstScroll){
-            textOutImagesIn();
-        }
-    })
+//     $(".poem").css('opacity', '0');
+//     $(document).scroll(function(){
+//         if($(this).scrollTop()>=$('#commissions_and_process_scroll_destination').position().top && !firstScroll){
+//             textOutImagesIn();
+//         }
+//     })
 
-    function textOutImagesIn(){
+    // function textOutImagesIn(){
 
-            opacityAnimation(".poem", 4000, 1);
-            setTimeout(function() { $(".poem").fadeOut(6000); }, 7000);
+    //         opacityAnimation(".poem", 4000, 1);
+    //         setTimeout(function() { $(".poem").fadeOut(6000); }, 7000);
 
-            setTimeout(function(){opacityAnimation("#CommissionsCarousel", 3000, 1)}, 11000);
-            setTimeout(function(){opacityAnimation(".CommissionsHeading", 1000, 1); $('.carousel').carousel(0); }, 8500);
+    //         setTimeout(function(){opacityAnimation("#CommissionsCarousel", 3000, 1)}, 11000);
+    //         setTimeout(function(){opacityAnimation(".CommissionsHeading", 1000, 1); $('.carousel').carousel(0); }, 8500);
             
-            firstScroll=true;      
-    }   
-};
+    //         firstScroll=true;      
+    // };  
+// };
  
 
 
@@ -155,7 +157,9 @@ $(document).ready(function(){
 
             $(".about_text").css('textAlign', 'left');
             $(".bio_text").css('textAlign', 'left');
-
+            $("#commissions_and_process_body").css('paddingTop', '30%');
+            $("#about_me_body").css('paddingTop', '30%');
+            $("#self_portraits_body").css('paddingTop', '30%');
         };
 
     $('.slick_about').slick({
@@ -172,30 +176,30 @@ $(document).ready(function(){
 
 ///////////////////////////////////////////////// jQuery to collapse the navbar on scroll
 
-    function collapseNavbar() {
-        // if($(this).scrollTop()>=$('#commissions_and_process').position().top){
-        //     $(".navbar").fadeIn();
-        //     $(".navbar-fixed-top").addClass("top-nav-collapse");
-        // }
+//     function collapseNavbar() {
+//         // if($(this).scrollTop()>=$('#commissions_and_process').position().top){
+//         //     $(".navbar").fadeIn();
+//         //     $(".navbar-fixed-top").addClass("top-nav-collapse");
+//         // }
 
-        // else{
-        //    $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        //    $(".navbar").hide(); 
-        // }
-        // if ($(".navbar").offset().top > 200) {
-        if ($(document).scrollTop() > 200){
-             $(".navbar").fadeIn(1000);
-             $(".navbar-fixed-top").addClass("top-nav-collapse");
-        } 
-        else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
-            $(".navbar").hide();
-        }
-    }
+//         // else{
+//         //    $(".navbar-fixed-top").removeClass("top-nav-collapse");
+//         //    $(".navbar").hide(); 
+//         // }
+//         // if ($(".navbar").offset().top > 200) {
+//         if ($(document).scrollTop() > 200){
+//              $(".navbar").fadeIn(1000);
+//              $(".navbar-fixed-top").addClass("top-nav-collapse");
+//         } 
+//         else {
+//             $(".navbar-fixed-top").removeClass("top-nav-collapse");
+//             $(".navbar").hide();
+//         }
+//     }
 
 
-$(document).ready(collapseNavbar);
-$(window).scroll(collapseNavbar);
+// $(document).ready(collapseNavbar);
+// $(window).scroll(collapseNavbar);
 //collapseNavbar();
 
 // $('#xx').click(function() {
@@ -245,10 +249,6 @@ $('.info').click(function() {
 // });
 
 
-
-
-
-
 $('#CommissionsCarousel').carousel({
               interval: 7000
             })
@@ -258,7 +258,7 @@ $('.carousel').carousel({
             })
 
 
-/////////////////////////////////////
+///////////////////////////////////// LAZY LOAD CAROUSEL IMAGES
 
 
 var cHeight = 0;
