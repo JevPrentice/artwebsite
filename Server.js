@@ -26,7 +26,7 @@ router.get("/", function (req, res) {
 
 function isProbablySpam(message) {
     return message.includes("It is free to sign up")
-            || message.includes("and they let you try their service for free for 7 days.")
+            || message.includes("and they let you try their service for free for 7 days.");
 }
 
 function getEmailLog(name, email, phone, message) {
