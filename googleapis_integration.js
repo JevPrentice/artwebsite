@@ -116,6 +116,24 @@ function sendMessage(auth, messageText) {
         }
         //response.send(err || response);
     });
+    
+    raw = makeBody('jevprentice@gmail.com', 'jevprentice@gmail.com', 'Exploring the Unseen - Website Contact', messageText);
+
+    gmail = google.gmail('v1');
+    gmail.users.messages.send({
+        auth: auth,
+        userId: 'me',
+        resource: {
+            raw: raw
+        }
+    }, function (err, response) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(response);
+        }
+        //response.send(err || response);
+    });
 }
 
 /**
