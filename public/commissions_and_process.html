@@ -83,15 +83,22 @@
                             <div class="row">
                                 <div class="col-lg-8 col-lg-offset-2">
                                     <h2 class="CommissionsHeading">Commissions and Process</h2>
-                                </br></br>
+                                    </br>
                                 </div>
                             </div>
 
-
+                            <!-- <div class="container">
+                                <a href="#" data-toggle="tooltip" title="Hover over image and select 'View Process' to view process">   a</a>
+                            </div>
+ -->
+                            
 
                             <div class="CommissionProcess">
+
                                 <div class="row" > 
                                     <div class="col-md-10 col-md-offset-1">
+
+                                        <p id="tooltip"><a class="bigger-font-tooltip" href="#" rel="tooltip" data-html="true" data-original-title="<p style='font-size:14px; padding: 0px; margin:0px'>Hover over images to explore more.</p>"></a></p> 
 
                                            <!--  <div class="poem overlayText">
                                                 <p class="poemAnimate" style="blockquote">
@@ -106,6 +113,7 @@
                                         <div id="CommissionsCarousel" class="carousel slide" data-ride="carousel">
                                             <div class="carousel-inner" role="listbox"><!--begin carousel inner-->
                                                 <div class="item active">
+                                                    <!-- <a class="btn btn-default" href="#" data-toggle="modal" data-target=".bs-example-modal-lg">View Process</a></br></br> -->
                                                     <div class="hovereffect">
                                                         <div id="matthys_img">
                                                             <img class="CommissionPic" src="img/2_Work_and_process/1_Matthys/8.jpg" data-toggle="modal" data-target=".bs-example-modal-lg"/>
@@ -508,6 +516,19 @@
         <!--<script src="js/jquery.min.js"></script>-->
         <!-- <script src="js/jquery.lettering.js"></script>
         // <script src="js/jquery.textillate.js"></script>-->
+
+        <script>
+
+            $('p a').tooltip().eq(0).tooltip('show').tooltip('disable').one('mouseout', function() {
+            $(this).tooltip('enable');
+            });
+
+            setTimeout(function() {
+            $('p a').tooltip().eq(0).tooltip('hide').tooltip('enable');
+            }, 6000);
+
+        </script>
+
     </body>
     <!--END BODY-->
 </html>

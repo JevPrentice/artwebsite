@@ -160,6 +160,7 @@ $(document).ready(function(){
             $("#commissions_and_process_body").css('paddingTop', '30%');
             $("#about_me_body").css('paddingTop', '30%');
             $("#self_portraits_body").css('paddingTop', '30%');
+            $(".carousel-caption").css('fontSize', '12px');
         };
 
     $('.slick_about').slick({
@@ -254,7 +255,7 @@ $('#CommissionsCarousel').carousel({
             })
 
 $('.carousel').carousel({
-    interval: 3500
+    interval: 7000
             })
 
 
@@ -291,6 +292,11 @@ $('#CommissionsCarousel, #SelfPortraitsCarousel').on('slide.bs.carousel', functi
        $nextImage.attr('src', src)
        $nextImage.data('lazy-load-src', '');
     }
+});
+
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
 });
 
 

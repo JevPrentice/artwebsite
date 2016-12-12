@@ -188,6 +188,7 @@ a:focus {
     .intro .intro-body .intro-text{
         font-size: 14px;
     }
+
 }
 
 /*.intro .intro-body .intro-text {
@@ -1196,3 +1197,13 @@ section {
 #commissions_and_process_body, #about_me_body, #self_portraits_body {
     padding-top: 5%; /*This works regardless of display size.*/
 }
+
+#tooltip{
+    text-align:center;
+    margin-left:50%;
+}
+
+.bigger-font-tooltip{
+    font-size: 20px;
+}
+
